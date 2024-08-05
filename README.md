@@ -8,7 +8,7 @@ softuni-react-project
  - [x] Add base vite reat project as client
  - [x] CleanUp client
  - [x] Add resources from project resources
- - [x] Separeta html into components
+ - [] Separeta html into components
 
 ## 2. Basic Components
  * Install react-router-dom
