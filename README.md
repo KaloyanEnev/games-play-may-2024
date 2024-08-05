@@ -14,5 +14,5 @@ softuni-react-project
  * Install react-router-dom
  * SEtup react-router-dom
  * Add router in App.jsx
- * sfssaas
+ * Add sth
 ## 
