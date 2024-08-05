@@ -1,10 +1,14 @@
+import Header from "./components/header/Header"
 
 
 function App() {
 
   return (
     <>
-     <h1>Games play</h1>
+    <Header/>
+    <main id="main-content">
+      
+        </main>
     </>
   )
 }

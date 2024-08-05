@@ -8,6 +8,7 @@ softuni-react-project
  - [x] Add base vite reat project as client
  - [x] CleanUp client
  - [x] Add resources from project resources
+ - [x] Convert html to jsx
  - [] Separeta html into components
 
 ## 2. Basic Components
