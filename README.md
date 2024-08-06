@@ -25,6 +25,6 @@ softuni-react-project
 
 ## 4. Page implementation
 - [x] Game List
-- [ ] Home
-- [ ] Details
-- [ ]  
+- [x] Home
+- [x] Details  - create link , route
+- [x]  Api funcion - getOne
