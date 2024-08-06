@@ -28,3 +28,7 @@ softuni-react-project
 - [x] Home
 - [x] Details  - create link , route
 - [x]  Api funcion - getOne
+## 5. Comments
+- [x] Create service for comments
+- [x] Post comments to server
+- [ ] Get comments from service
