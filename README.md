@@ -25,3 +25,6 @@ softuni-react-project
 
 ## 4. Page implementation
 - [x] Game List
+- [ ] Home
+- [ ] Details
+- [ ]  
