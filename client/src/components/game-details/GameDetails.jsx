@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as gamesAPI from "../../api/games-api";
+import gamesAPI from "../../api/games-api";
 import { useParams } from "react-router-dom";
 import * as commentsApi from "../../api/comments-api";
 import { getAllComments } from "../../api/comments-api";
