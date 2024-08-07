@@ -49,9 +49,10 @@ softuni-react-project
     - [ ] Logout
   
 - [x] AuthState & context
-- [ ] Token managment
-- [ ] Login
-- [ ] Register
+- [x] Token managment
+- [x] Login
+- [x] Register
+- [x] Add form validation
 - [ ] Logout
 
  
