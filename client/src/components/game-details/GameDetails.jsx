@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import gamesAPI from "../../api/games-api";
 import { useParams } from "react-router-dom";
-import * as commentsApi from "../../api/comments-api";
-import { getAllComments } from "../../api/comments-api";
+import commentsAPI from "../../api/comments-api";
+//import { getAllComments } from "../../api/comments-api";
 import { useGetOneGames } from "../../hooks/useGames";
 
 export default function GameDetails() {
@@ -16,8 +16,9 @@ export default function GameDetails() {
 
   
   const commentSubmitHandler = async (e) => {
+    
     e.preventDefault();
-    const newComment = await commentsApi.create(gameId, username, comment);
+    const newComment = await commentsAPI.create(gameId, username, comment);
     setGame((previousState) => ({
       ...previousState,
       comments: {
