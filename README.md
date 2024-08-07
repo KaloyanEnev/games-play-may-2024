@@ -43,8 +43,16 @@ softuni-react-project
     - [x] Login
     - [ ] Register
     - [ ] Logout
+- [x] AuthAPI hook  
+    - [x] Login
+    - [ ] Register
+    - [ ] Logout
+  
 - [x] AuthState & context
 - [ ] Token managment
+- [ ] Login
+- [ ] Register
+- [ ] Logout
 
  
 
