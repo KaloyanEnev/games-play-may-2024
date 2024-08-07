@@ -10,23 +10,23 @@ const initialValues = {
 };
 
 export default function GameCreate() {
-    const navigate = useNavigate()
-      const createGame = useCreateGame()
-  const createHandler = async(values) => {
-    try{
-       const {_id: gameId} =await createGame(values);
-        navigate(`/games/${gameId}/details`)
+  const navigate = useNavigate();
+  const createGame = useCreateGame();
+  const createHandler = async (values) => {
+    try {
+      const { _id: gameId } = await createGame(values);
+
+      navigate(`/games/${gameId}/details`);
+    } catch (err) {
+      //TODO :set error state and display
+      console.error(err.message);
     }
-    catch(err){
-        //TODO :set error state and display
-     console.error(err.message)
-    }
-  
+
     //
   };
   const { values, changeHandler, submitHandler } = useForm(
     initialValues,
-   createHandler
+    createHandler
   );
   return (
     <section id="create-page" className="auth">

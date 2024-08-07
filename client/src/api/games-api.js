@@ -1,5 +1,6 @@
-import * as request from "../api/requster";
-const baseUrl = "http://localhost:3030/jsonstore/games"; 
+import * as request from "./requester";
+const baseUrl = "http://localhost:3030/data/games"; 
+// might need to add previous url jsonstore/games
 const urlForCreating = "http://localhost:3030/data/games"
 export const getAll = async () => {
  const result =  await request.get(baseUrl);
@@ -10,7 +11,11 @@ export const getAll = async () => {
 
 export const getOne = (gameId) => request.get(`${baseUrl}/${gameId}`)
 
- const create = (gameData) => request.post(`${urlForCreating}`,gameData)
+ const create = (gameData) =>  request.post(`${baseUrl}`,gameData)
+ 
+
+ 
+ 
 
 
 const gamesAPI = {

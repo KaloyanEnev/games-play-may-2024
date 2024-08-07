@@ -12,7 +12,9 @@ import { AuthContext } from "./contexts/AuthContext";
 function App() {
   const [authState, setAuthState] = useState({});
   const changeAuthState = (state) => {
-    //TO do validation
+    //TODO : quick solution - fix by imlp persisting authState 
+    localStorage.setItem('accessToken',state.accessToken)
+
 
 setAuthState(state)
   }

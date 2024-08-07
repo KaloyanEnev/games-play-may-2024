@@ -1,4 +1,4 @@
-import * as requester from "./requster";
+import * as requester from "./requester";
 const baseUrl = "http://localhost:3030/jsonstore/games";
 const buildUrl = (gameId) => {
   return `${baseUrl}/${gameId}/comments`;
