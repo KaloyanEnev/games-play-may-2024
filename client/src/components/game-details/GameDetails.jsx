@@ -3,23 +3,18 @@ import gamesAPI from "../../api/games-api";
 import { useParams } from "react-router-dom";
 import * as commentsApi from "../../api/comments-api";
 import { getAllComments } from "../../api/comments-api";
+import { useGetOneGames } from "../../hooks/useGames";
 
 export default function GameDetails() {
-  const [game, setGame] = useState({});
+  const { gameId } = useParams();
+
+  const [game, setGame] = useGetOneGames(gameId)
   const [username, setUsername] = useState("");
 
   const [comment, setComment] = useState("");
 
-  const { gameId } = useParams();
 
-  useEffect(() => {
-    (async () => {
-      const result = await gamesAPI.getOne(gameId);
-      //  console.log(Object.values(result.comments));
-
-      setGame(result);
-    })();
-  }, []);
+  
   const commentSubmitHandler = async (e) => {
     e.preventDefault();
     const newComment = await commentsApi.create(gameId, username, comment);

@@ -9,3 +9,16 @@ export function useGetAllGames(){
     },[])
     return [games,setGames]
 }
+export function useGetOneGames(gameId){
+  const [game, setGame] = useState({});
+
+    useEffect(() => {
+        (async () => {
+          const result = await gamesAPI.getOne(gameId);
+          //  console.log(Object.values(result.comments));
+    
+          setGame(result);
+        })();
+      }, [gameId]);
+      return[game,setGame]
+}
