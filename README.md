@@ -10,7 +10,7 @@ softuni-react-project
 - [x] CleanUp client
 - [x] Add resources from project resources
 - [x] Convert html to jsx
-- [] Separeta html into components
+- [x] Separeta html into components
 
 ## 2. Basic Components
 
@@ -31,4 +31,22 @@ softuni-react-project
 ## 5. Comments
 - [x] Create service for comments
 - [x] Post comments to server
-- [ ] Get comments from service
+- [x] Get comments from service
+- [x] Update with new comment without doing new request
+- [x] Clear form 
+## 6. API Hooks
+- [x] GameAPI hooks
+- [ ] Comments hooks
+- [ ] Form hook
+## 7. Authentication
+- [x] AuthAPI 
+- [ ] AuthState & context
+- [ ] Login
+- [ ] Register
+- [ ] Logout
+## 8. UI implementation
+- [x] Dynamic navigation
+- [ ] Create game
+  - [ ] Api function
+  - [ ] Create hook
+ 
