@@ -13,9 +13,7 @@ export const AuthContext = createContext({
 export function AuthContextProvider(props) {
   const [authState, setAuthState] = usePersistedState('auth',{});
   const changeAuthState = (state) => {
-    //TODO : quick solution - fix by imlp persisting authState
-    localStorage.setItem("accessToken", state.accessToken);
-
+    
     setAuthState(state);
   };
   const logout = () => {
