@@ -1,9 +1,12 @@
 
+import { useAuthContext } from '../../contexts/AuthContext';
 import { useGetAllGames } from '../../hooks/useGames';
 import GameListItem from './game-list-item/GameListITem';
 
 export default function GameList() {
    const [games,setGames] = useGetAllGames();
+  
+   
    
   return (
     <section id="catalog-page">

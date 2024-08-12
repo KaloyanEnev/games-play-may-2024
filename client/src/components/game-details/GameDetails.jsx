@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import gamesAPI from "../../api/games-api";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import commentsAPI from "../../api/comments-api";
 //import { getAllComments } from "../../api/comments-api";
 import { useGetOneGames } from "../../hooks/useGames";
@@ -11,13 +11,15 @@ const initialValues = {
   comment: "",
 };
 export default function GameDetails() {
+  const navigate = useNavigate();
   const { gameId } = useParams();
   const [comments,setComments] = useGetAllComments(gameId);
 
     const createComment = useCreateComment();
-  const {isAuthenticated} = useAuthContext()
+  const {isAuthenticated,email: authEmail,userId} = useAuthContext()
 
   const [game, setGame] = useGetOneGames(gameId);
+  const ownerId = game._ownerId;
 
   const { values, changeHandler, submitHandler } = useForm(
     initialValues,
@@ -33,6 +35,16 @@ export default function GameDetails() {
     }
     }
   );
+  const gameDeleteHandler =async () =>{
+    try{
+
+      await gamesAPI.remove(gameId)
+      navigate('/games')
+    }catch(err){
+      console.log(err);
+      
+    }
+  }
 
   return (
     <section id="game-details">
@@ -52,7 +64,7 @@ export default function GameDetails() {
           <ul>
           {comments.map(comment=>(
             <li key={comment._id} className="comment">
-              <p>{comment.author.email}: {comment.text}</p>
+              <p> { comment.author ? comment.author.email : authEmail}: {comment.text}</p>
             </li>
           ))
           } 
@@ -60,14 +72,14 @@ export default function GameDetails() {
           {comments.length === 0 &&  <p className="no-comment">No comments.</p>} 
         </div>
 
-        <div className="buttons">
-          <a href="#" className="button">
+       {userId === ownerId && (<div className="buttons">
+          <Link to={`/games/${gameId}/edit`} className="button">
             Edit
-          </a>
-          <a href="#" className="button">
+          </Link>
+          <a href="#" onClick={gameDeleteHandler} className="button">
             Delete
           </a>
-        </div>
+        </div>) }
       </div>
 
      { isAuthenticated && 

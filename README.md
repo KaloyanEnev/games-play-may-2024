@@ -41,11 +41,11 @@ softuni-react-project
 ## 7. Authentication
 - [x] AuthAPI  
     - [x] Login
-    - [ ] Register
+    - [x] Register
     - [ ] Logout
 - [x] AuthAPI hook  
     - [x] Login
-    - [ ] Register
+    - [x] Register
     - [ ] Logout
   
 - [x] AuthState & context
@@ -54,12 +54,18 @@ softuni-react-project
 - [x] Register
 - [x] Add form validation
 - [ ] Logout
+- [x] Authorized requests
 
  
 
 ## 8. UI implementation
 - [x] Dynamic navigation
-- [ ] Create game
-  - [ ] Api function
-  - [ ] Create hook
- 
+- [x] Create game
+  - [x] Api function
+  - [x] Create hook
+- [x] Delete game
+- [ ] Edit game 
+ ## 9 Refactoring
+ - [x] Extract auth state from app component
+ - [x] Persist auth state
+ - [x] Comments
